@@ -1,6 +1,12 @@
 import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
+// Alignment? startAlignment -> opcional
+// final -> a variavel só pode ser reconhecido em run time Ex.: DateTime.Now().
+// const -> constante de tempo de compilação, objeto imutável.
+
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
@@ -13,8 +19,8 @@ class GradientContainer extends StatelessWidget {
             Color.fromARGB(255, 58, 12, 134),
             Color.fromARGB(255, 88, 19, 156),
           ],
-          begin: AlignmentGeometry.topLeft,
-          end: AlignmentGeometry.bottomRight,
+          begin: startAlignment,
+          end: endAlignment,
         ),
       ),
       child: const Center(
