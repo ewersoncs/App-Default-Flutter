@@ -18,9 +18,14 @@ class GradientContainer extends StatelessWidget {
   // Esta forma é para lista de array com as cores
   // final List<Color> colors;
 
-  // Esta forma permite eu setar as duas cores separadamente
+  // 1. Esta forma permite eu setar as duas cores separadamente
   final Color colorOne;
   final Color colorTwo;
+
+  // 2. Criando o gradiente de cores com construtores personalizados
+  const GradientContainer.purple({super.key})
+    : colorOne = const Color.fromARGB(255, 58, 12, 134),
+      colorTwo = const Color.fromARGB(255, 88, 19, 156);
 
   @override
   Widget build(BuildContext context) {

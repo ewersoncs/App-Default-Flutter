@@ -17,7 +17,5 @@ void main() {
 }
 
 // Se for da maneira 1 seria assim.
-//GradientContainer(colors: [
-//   Color.fromARGB(255, 58, 12, 134),
-//   Color.fromARGB(255, 88, 19, 156),
-// ],)
+// Assim chamaria o construtor personalizado
+// body: GradientContainer.purple()
