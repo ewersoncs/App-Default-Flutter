@@ -7,8 +7,17 @@ void main() {
     const CupertinoApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(),
+        body: GradientContainer(
+          Color.fromARGB(255, 58, 12, 134),
+          Color.fromARGB(255, 88, 19, 156),
+        ),
       ),
     ),
   );
 }
+
+// Se for da maneira 1 seria assim.
+//GradientContainer(colors: [
+//   Color.fromARGB(255, 58, 12, 134),
+//   Color.fromARGB(255, 88, 19, 156),
+// ],)
