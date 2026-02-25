@@ -42,17 +42,27 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+          //Controla o comportamento de dimensionamento do Flex ao longo do seu eixo principal.
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               'assets/images/dice-1.png',
               width: 200,
             ),
+            // Outra abordagem seria por um sizedBox()
+            Padding(padding: const EdgeInsetsGeometry.only(top: 20)),
             // Flutter aceita 3 tipos de botões
             // OutlinedButton(onPressed: () => {}, child: Text("Button")),
             // TextButton(onPressed: () => {}, child: const Text("Jogar Dados")),
             ElevatedButton(
               // Função anônima () {}
               onPressed: rollDice,
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.blue,
+                textStyle: const TextStyle(
+                  fontSize: 28,
+                ),
+              ),
               child: Text("Jogar Dados"),
             ),
           ],
