@@ -1,12 +1,20 @@
 import 'package:first_app/gradient_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(
-    const CupertinoApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.deepPurple,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+          title: Text(
+            "First App",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
         body: GradientContainer(
           Color.fromARGB(255, 58, 12, 134),
           Color.fromARGB(255, 88, 19, 156),
