@@ -26,6 +26,10 @@ class GradientContainer extends StatelessWidget {
     : colorOne = const Color.fromARGB(255, 58, 12, 134),
       colorTwo = const Color.fromARGB(255, 88, 19, 156);
 
+  void rollDice() {
+    //
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,9 +41,21 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-1.png',
-          width: 200,
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/dice-1.png',
+              width: 200,
+            ),
+            // Flutter aceita 3 tipos de botões
+            // OutlinedButton(onPressed: () => {}, child: Text("Button")),
+            // TextButton(onPressed: () => {}, child: const Text("Jogar Dados")),
+            ElevatedButton(
+              // Função anônima () {}
+              onPressed: rollDice,
+              child: Text("Jogar Dados"),
+            ),
+          ],
         ),
       ),
     );
