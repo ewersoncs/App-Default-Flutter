@@ -1,3 +1,4 @@
+import 'package:first_app/dice_roll.dart';
 import 'package:flutter/material.dart';
 
 const startAlignment = Alignment.topLeft;
@@ -26,10 +27,6 @@ class GradientContainer extends StatelessWidget {
     : colorOne = const Color.fromARGB(255, 58, 12, 134),
       colorTwo = const Color.fromARGB(255, 88, 19, 156);
 
-  void rollDice() {
-    //
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,32 +38,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Column(
-          //Controla o comportamento de dimensionamento do Flex ao longo do seu eixo principal.
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/images/dice-1.png',
-              width: 200,
-            ),
-            // Outra abordagem seria por um sizedBox()
-            Padding(padding: const EdgeInsetsGeometry.only(top: 20)),
-            // Flutter aceita 3 tipos de botões
-            // OutlinedButton(onPressed: () => {}, child: Text("Button")),
-            // TextButton(onPressed: () => {}, child: const Text("Jogar Dados")),
-            ElevatedButton(
-              // Função anônima () {}
-              onPressed: rollDice,
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.blue,
-                textStyle: const TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              child: Text("Jogar Dados"),
-            ),
-          ],
-        ),
+        child: DiceRoll(),
       ),
     );
   }

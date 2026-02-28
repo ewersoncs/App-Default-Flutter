@@ -16,8 +16,8 @@ void main() {
           ),
         ),
         body: GradientContainer(
-          Color.fromARGB(255, 58, 12, 134),
-          Color.fromARGB(255, 88, 19, 156),
+          const Color.fromARGB(255, 58, 12, 134),
+          const Color.fromARGB(255, 88, 19, 156),
         ),
       ),
     ),
